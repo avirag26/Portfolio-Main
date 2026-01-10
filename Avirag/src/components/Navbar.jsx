@@ -13,15 +13,14 @@ const Navbar = () => {
         };
         window.addEventListener('scroll', handleScroll);
 
-        // Initialize theme - check current state
+        // Initialize theme - default to light theme
         const currentTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
-        if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
+        if (currentTheme === 'dark') {
             setIsDark(true);
             document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
         } else {
+            // Default to light theme
             setIsDark(false);
             document.documentElement.classList.remove('dark');
             localStorage.setItem('theme', 'light');

@@ -1,36 +1,35 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { User, Users, FileText, Clock, Lightbulb, Globe } from 'lucide-react';
 
 const About = () => {
     const softSkills = [
         {
-            icon: <Users className="text-blue-400" size={28} />,
+            icon: <Users className="text-purple-500" size={28} />,
             title: "Communication",
             desc: "Strong presentation skills, confident in client meetings and public speaking."
         },
         {
-            icon: <User className="text-purple-400" size={28} />,
+            icon: <User className="text-purple-600" size={28} />,
             title: "Leadership",
             desc: "Experience in guiding teams, decision making, and effective task delegation."
         },
         {
-            icon: <FileText className="text-green-400" size={28} />,
+            icon: <FileText className="text-purple-400" size={28} />,
             title: "Documentation",
             desc: "Proficient in preparing clear, structured, and professional technical reports."
         },
         {
-            icon: <Clock className="text-orange-400" size={28} />,
+            icon: <Clock className="text-purple-700" size={28} />,
             title: "Time Management",
             desc: "Ability to prioritize tasks, meet deadlines, and coordinate multiple projects."
         },
         {
-            icon: <Lightbulb className="text-yellow-400" size={28} />,
+            icon: <Lightbulb className="text-purple-500" size={28} />,
             title: "Creativity",
             desc: "Innovative problem-solving and adaptability to changing requirements."
         },
         {
-            icon: <Globe className="text-cyan-400" size={28} />,
+            icon: <Globe className="text-purple-600" size={28} />,
             title: "Languages",
             desc: "English, Malayalam, Tamil, and basic conversational Hindi."
         }
@@ -59,23 +58,54 @@ const About = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="space-y-6"
                     >
-                        <h3 className="text-2xl font-semibold text-purple-600 dark:text-purple-400">
-                            Passionate Full-Stack Developer
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                            I am a Full-Stack Web Developer with 3+ years of experience in freelancing and tutoring.
-                            My expertise lies in the MERN stack (MongoDB, Express.js, React, Node.js), and I have a strong foundation in
-                            Data Structures & Algorithms.
-                        </p>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                            I have built and deployed multiple static and dynamic web applications, integrated complex APIs,
-                            and handled cloud deployments using AWS and Nginx. Beyond coding, I enjoy mentoring upcoming developers
-                            and helping them master programming logic.
-                        </p>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                            I am a self-taught fast learner who adapts quickly to new technologies, constantly exploring
-                            innovative solutions like AI integration to enhance user experiences.
-                        </p>
+                        <div className="mb-6">
+                            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                                MERN Stack Developer
+                            </h3>
+                            <p className="text-xl text-purple-600 dark:text-purple-400 font-semibold">
+                                Building Modern Web Applications
+                            </p>
+                        </div>
+                        
+                        <div className="space-y-6">
+                            <div className="p-6 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl border-l-4 border-purple-500">
+                                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technical Skills</h4>
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Full-Stack Web Developer with <strong>1+ years of experience</strong> in freelancing and tutoring. 
+                                    Proficient in JavaScript, React, Node.js, Express.js, MongoDB, and PostgreSQL. 
+                                    Strong foundation in Data Structures & Algorithms with experience in modern web development practices.
+                                </p>
+                            </div>
+
+                            <div className="p-6 bg-gradient-to-r from-purple-100 to-purple-50 dark:from-purple-800/20 dark:to-purple-900/20 rounded-xl border-l-4 border-purple-600">
+                                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Project Experience</h4>
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Built and deployed multiple static and dynamic web applications using the MERN stack. 
+                                    Experience with API integration, authentication systems, payment gateways, and cloud deployments using AWS, Vercel, and Nginx. 
+                                    Developed responsive, user-friendly interfaces with modern CSS frameworks.
+                                </p>
+                            </div>
+
+                            <div className="p-6 bg-gradient-to-r from-purple-50 to-purple-200 dark:from-purple-900/20 dark:to-purple-700/20 rounded-xl border-l-4 border-purple-700">
+                                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Learning & Growth</h4>
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Currently pursuing advanced MERN Stack development at Brototype. 
+                                    Passionate about mentoring junior developers and helping them improve their coding skills. 
+                                    Self-taught learner who adapts quickly to new technologies and follows clean coding practices.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-700">
+                            <h4 className="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span className="w-3 h-3 bg-purple-500 rounded-full mr-3 animate-pulse"></span>
+                                Currently Available for Opportunities
+                            </h4>
+                            <p className="text-gray-600 dark:text-gray-400">
+                                Seeking opportunities in <strong>Full-Stack Developer</strong>, <strong>MERN Stack Developer</strong>, 
+                                or <strong>Frontend/Backend Developer</strong> positions where I can contribute to innovative projects and continue growing my skills.
+                            </p>
+                        </div>
                     </motion.div>
 
                     {/* Soft Skills Grid */}

@@ -10,10 +10,10 @@ const Footer = () => {
                 </p>
 
                 <div className="flex gap-6">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black dark:hover:text-white transition-colors">
+                    <a href="https://github.com/avirag26" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black dark:hover:text-white transition-colors">
                         <Github size={20} />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <a href="https://linkedin.com/in/avirag26" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         <Linkedin size={20} />
                     </a>
                     <a href="mailto:aviragpv26@gmail.com" className="text-gray-500 hover:text-red-500 dark:hover:text-red-400 transition-colors">
