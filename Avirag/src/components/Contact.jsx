@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -37,16 +37,16 @@ const Contact = () => {
                     </div>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-12">
+                <div className="flex justify-center">
                     {/* Contact Info */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="space-y-8"
+                        className="max-w-2xl space-y-8"
                     >
-                        <div className="mb-8">
+                        <div className="mb-8 text-center">
                             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Let's Create Something Extraordinary</h3>
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg mb-6">
                                 I respond to all inquiries within <strong className="text-purple-600 dark:text-purple-400">24 hours</strong>. 
@@ -109,95 +109,6 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </motion.div>
-
-                    {/* Contact Form */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                        className="bg-gradient-to-br from-white to-gray-50 dark:from-neutral-900 dark:to-neutral-800 p-8 rounded-2xl border border-gray-200 dark:border-neutral-700 shadow-xl"
-                    >
-                        <div className="mb-6">
-                            <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Start Your Project</h4>
-                            <p className="text-gray-600 dark:text-gray-400">Tell me about your vision and let's make it happen</p>
-                        </div>
-                        
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Full Name *</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        required
-                                        className="w-full bg-white dark:bg-neutral-900 border-2 border-gray-300 dark:border-neutral-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-                                        placeholder="John Doe"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="company" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Company</label>
-                                    <input
-                                        type="text"
-                                        id="company"
-                                        className="w-full bg-white dark:bg-neutral-900 border-2 border-gray-300 dark:border-neutral-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-                                        placeholder="Your Company"
-                                    />
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    required
-                                    className="w-full bg-white dark:bg-neutral-900 border-2 border-gray-300 dark:border-neutral-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-                                    placeholder="john@company.com"
-                                />
-                            </div>
-                            
-                            <div>
-                                <label htmlFor="project-type" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Project Type</label>
-                                <select
-                                    id="project-type"
-                                    className="w-full bg-white dark:bg-neutral-900 border-2 border-gray-300 dark:border-neutral-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-                                >
-                                    <option value="">Select project type</option>
-                                    <option value="full-time">Full-time Position</option>
-                                    <option value="freelance">Freelance Project</option>
-                                    <option value="consultation">Technical Consultation</option>
-                                    <option value="collaboration">Partnership/Collaboration</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Project Details *</label>
-                                <textarea
-                                    id="message"
-                                    rows="5"
-                                    required
-                                    className="w-full bg-white dark:bg-neutral-900 border-2 border-gray-300 dark:border-neutral-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
-                                    placeholder="Tell me about your project, timeline, budget, and specific requirements..."
-                                ></textarea>
-                            </div>
-                            
-                            <button
-                                type="submit"
-                                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-lg transition-all flex items-center justify-center gap-3 shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/30 transform hover:scale-[1.02]"
-                            >
-                                <Send size={20} />
-                                Send Project Details
-                                <span className="text-sm opacity-80">(24h response guaranteed)</span>
-                            </button>
-                        </form>
-                        
-                        <div className="mt-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-700">
-                            <p className="text-sm text-purple-700 dark:text-purple-300 text-center">
-                                Your information is secure and will never be shared with third parties
-                            </p>
                         </div>
                     </motion.div>
                 </div>
